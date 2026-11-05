@@ -14,7 +14,8 @@ let nextId = 1;
 
 // 1. Add a new task (defaults to status "todo")
 function addTask(tasks: Task[], title: string): Task[] {
-  const newTask: Task = { id: nextId++, title, status: "todo" };
+  const maxId = tasks.reduce((max, task) => (task.id > max ? task.id : max), 0);
+  const newTask: Task = { id: maxId + 1, title, status: "todo" };
   return [...tasks, newTask];
 }
 
