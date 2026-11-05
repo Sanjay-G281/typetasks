@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker | TypeTasks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-card">
+    <header>
+      <h1>Task Tracker</h1>
+      <p id="counter">0 tasks</p>
+    </header>
+
+    <div class="input-group">
+      <input id="title" type="text" placeholder="Add a new task…" />
+      <select id="status">
+        <option value="todo">todo</option>
+        <option value="in-progress">in-progress</option>
+        <option value="done">done</option>
+      </select>
+      <button id="add">Add Task</button>
+    </div>
+
+    <div id="chips" class="filter-chips">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="todo">Todo</button>
+      <button class="chip" data-filter="in-progress">In-Progress</button>
+      <button class="chip" data-filter="done">Done</button>
+    </div>
+
+    <ul id="list" class="task-list"></ul>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
